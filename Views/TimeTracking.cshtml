@@ -1,0 +1,7 @@
+﻿@{
+    Style.Include("timetracking").AtHead();
+}
+<script src="Modules/TimeTracking/Scripts/app/require.config.js"></script>
+<script data-main="Modules/TimeTracking/Scripts/app/startup" src="Modules/TimeTracking/Scripts/libs/requirejs/require.js"></script>
+<nav-bar params="route: route"></nav-bar>
+<div id="page" class="container-fluid" data-bind="component: { name: route().page, params: route }"></div>

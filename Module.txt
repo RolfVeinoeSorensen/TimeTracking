@@ -1,0 +1,10 @@
+﻿Name: TimeTracking
+AntiForgery: enabled
+Author: Rolf Veinø Sørensen
+Website: http://orchardproject.net
+Version: 1.0
+OrchardVersion: 1.9.1
+Description: Timetracking and Billing module
+Features:
+    TimeTracking:
+        Description: Timetracking and Billing.
