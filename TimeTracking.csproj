@@ -100,7 +100,6 @@
   <ItemGroup>
     <Folder Include="Controllers\Api\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\definitions\custom\bootstrap.datepicker\" />
     <Folder Include="Scripts\libs\" />
     <Folder Include="Styles\css\" />
     <Folder Include="Styles\less\bootstrap\fonts\" />
@@ -122,8 +121,11 @@
     <TypeScriptCompile Include="Scripts\app\startup.ts" />
     <TypeScriptCompile Include="Scripts\components\home-page\home.ts" />
     <TypeScriptCompile Include="Scripts\components\nav-bar\nav-bar.ts" />
-    <TypeScriptCompile Include="Scripts\definitions\custom\bootstrap.v3.datetimepicker\bootstrap.v3.datetimepicker-tests.ts" />
-    <TypeScriptCompile Include="Scripts\definitions\custom\bootstrap.v3.datetimepicker\bootstrap.v3.datetimepicker.d.ts" />
+    <TypeScriptCompile Include="Scripts\definitions\custom\bootstrap.datepicker\bootstrap.datepicker-tests.ts" />
+    <TypeScriptCompile Include="Scripts\definitions\custom\bootstrap.datepicker\bootstrap.datepicker.d.ts" />
+    <TypeScriptCompile Include="Scripts\definitions\custom\jquery.fancytree\jquery.fancytree-tests.ts" />
+    <TypeScriptCompile Include="Scripts\definitions\custom\jquery.fancytree\jquery.fancytree.d.ts" />
+    <TypeScriptCompile Include="Scripts\definitions\custom\jqueryui\jqueryui.d.ts" />
     <TypeScriptCompile Include="Scripts\definitions\custom\requirejs-base64\requirejs-base64.d.ts" />
     <TypeScriptCompile Include="Scripts\definitions\custom\toastr\toastr-tests.ts" />
     <TypeScriptCompile Include="Scripts\definitions\custom\toastr\toastr.d.ts" />
@@ -219,6 +221,9 @@
     <Content Include="Styles\less\bootstrap-datepicker\less\.csslintrc" />
     <Content Include="Styles\less\bootstrap-datepicker\less\datepicker.less" />
     <Content Include="Styles\less\bootstrap-datepicker\less\datepicker3.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\definitions\custom\jqueryui\jqueryui-tests.ts.tscparams" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

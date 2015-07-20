@@ -6,6 +6,11 @@ var fs = require('fs'), vm = require('vm'), merge = require('deeply'), chalk = r
 var gulp = require('gulp'), rjs = require('gulp-requirejs-bundler'), concat = require('gulp-concat'), clean = require('gulp-clean'), file = require('gulp-file'), minifyCSS = require('gulp-minify-css'),
     replace = require('gulp-replace'), uglify = require('gulp-uglify'), htmlreplace = require('gulp-html-replace'), typescript = require('gulp-tsc'), less = require('gulp-less'), git = require('gulp-git');
 
+gulp.task('default', ['tsApp', 'tsComponents', 'css']), function (callback) {
+    callback();
+    console.log(chalk.green('\nModule default task Compiled '));
+}
+
 // Task to run before build to compile all Typescript files
 gulp.task('beforeBuild', ['tsApp', 'tsComponents'], function (callback) {
     callback();

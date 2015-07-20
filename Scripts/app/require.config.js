@@ -10,6 +10,8 @@ var require = {
         "crossroads":           "Modules/TimeTracking/Scripts/libs/crossroads/dist/crossroads.min",
         "hasher":               "Modules/TimeTracking/Scripts/libs/hasher/dist/js/hasher.min",
         "jquery":               "Modules/TimeTracking/Scripts/libs/jquery/dist/jquery",
+        "jqueryui":             "Modules/TimeTracking/Scripts/libs/jquery-ui/jquery-ui.min",
+        "fancytree":            "Modules/TimeTracking/Scripts/libs/fancytree/dist/jquery.fancytree-all.min",
         "knockout":             "Modules/TimeTracking/Scripts/libs/knockout/dist/knockout",
         "knockout-projections": "Modules/TimeTracking/Scripts/libs/knockout-projections/dist/knockout-projections",
         "signals":              "Modules/TimeTracking/Scripts/libs/js-signals/dist/signals.min",
@@ -21,11 +23,10 @@ var require = {
     },
     shim: {
         jquery: { exports: '$' },
+        "jqueryui": { deps: ["jquery"], exports: 'jqueryui' },
+        "fancytree": { deps: ["jquery", "jqueryui"], exports: 'fancytree' },
         "bootstrap": { deps: ["jquery"], exports: '$' },
         "toastr": { deps: ["jquery"] },
-        "datepicker": {
-            deps: ["jquery"],
-            exports: 'datepicker'
-        }
+        "datepicker": { deps: ["jquery"], exports: 'datepicker' }
     }
 };

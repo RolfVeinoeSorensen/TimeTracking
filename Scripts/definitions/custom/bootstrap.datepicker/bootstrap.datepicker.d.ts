@@ -57,7 +57,6 @@ interface JQuery {
 
 declare var datepicker: JQuery;
 
-//declare var toastr: Toastr;
 declare module "datepicker" {
     export = datepicker;
 }
