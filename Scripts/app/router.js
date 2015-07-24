@@ -16,6 +16,7 @@ define(["require", "exports", "knockout", "crossroads", "hasher"], function (req
         router.currentRoute = ko.observable({});
         var allRoutes = [
             { url: '', params: { page: 'home-page' } },
+            { url: 'timetracking', params: { page: 'timetracking-page' } },
             { url: 'about', params: { page: 'about-page' } }
         ];
         // Register routes with crossroads.js

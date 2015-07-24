@@ -8,10 +8,159 @@ body {
   clear: both;
 }
 .ttMain {
-  width: 80%;
+  width: 73%;
+  margin-right: 2%;
 }
 .ttLeft {
-  width: 20%;
+  width: 25%;
   padding: 0;
   margin: 0;
+}
+.ttTimeInput {
+  width: 30px;
+}
+/* table */
+.ttTable {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.ttTable table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.ttTable tr:nth-child(odd) {
+  background-color: #2d2d2d;
+}
+.ttTable tr:nth-child(even) {
+  background-color: #000000;
+}
+.ttTable td,
+.ttTable th {
+  vertical-align: middle;
+  /*border: 1px solid #2d2d2d;
+    border-width: 0 1px 1px 0;*/
+  text-align: left;
+  padding: 0.5em;
+}
+/*.ttTable tr:last-child td {
+    border-width: 0 1px 0 0;
+}
+
+.ttTable tr td:last-child {
+    border-width: 0;
+}
+
+.ttTable tr:last-child td:last-child {
+    border-width: 0 0 0 0;
+}*/
+.ttTable thead tr:first-child th:first-child {
+  border-radius: 6px 0 0 0;
+}
+.ttTable thead tr:first-child th:last-child {
+  border-radius: 0 6px 0 0;
+}
+.ttTable thead tr:first-child th:only-child {
+  border-radius: 6px 6px 0 0;
+}
+.ttTable thead tr:first-child th {
+  /*background: -o-linear-gradient(bottom, #000000 5%, #4c4c4c 100%);
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #000000), color-stop(1, #4c4c4c) );
+    background: -moz-linear-gradient( center top, #000000 5%, #4c4c4c 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#4c4c4c");
+    background: -o-linear-gradient(top,#000000,4c4c4c);*/
+  background-color: #000000;
+  /*border: 0 solid #2d2d2d;*/
+  text-align: center;
+  /*border-width: 0 0 1px 1px;*/
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.ttTable thead tr:first-child:hover th {
+  /*background: -o-linear-gradient(bottom, #000000 5%, #4c4c4c 100%);
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #000000), color-stop(1, #4c4c4c) );
+    background: -moz-linear-gradient( center top, #000000 5%, #4c4c4c 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#4c4c4c");
+    background: -o-linear-gradient(top,#000000,4c4c4c);*/
+  background-color: #121212;
+  color: #f3f3f3;
+}
+/*.ttTable tr:first-child td:first-child {
+    border-width: 0 0 1px 0;
+}
+
+.ttTable tr:first-child td:last-child {
+    border-width: 0 0 1px 1px;
+}*/
+/* Table right click menu*/
+.ui-menu {
+  width: 150px;
+  font-size: 63%;
+}
+.ui-menu kbd {
+  /* Keyboard shortcuts for ui-contextmenu titles */
+  float: right;
+}
+/* custom alignment (set by 'renderColumns'' event) */
+/*td.alignRight {
+     text-align: right;
+  }
+  td input[type=input] {
+    width: 40px;
+  }*/
+/* CHARTS */
+/* Sunburst chart*/
+.em-chart-sunburst-container {
+  /*font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;*/
+  /*background-color: #fff;*/
+  width: 500px;
+  height: 500px;
+  margin-top: 10px;
+}
+.em-chart-sunburst-main {
+  float: left;
+  width: 400px;
+}
+.em-chart-sunburst-sidebar {
+  float: right;
+  width: 100px;
+}
+.em-chart-sunburst-sequence {
+  clear: both;
+  width: 500px;
+  /*height: 70px;*/
+}
+.em-chart-sunburst-legend {
+  padding: 10px 0 0 3px;
+}
+.em-chart-sunburst-sequence text,
+.em-chart-sunburst-legend text {
+  /*font-weight: 600;*/
+  font-size: 0.5em;
+  font-size-adjust: 0.50;
+  fill: #fff;
+}
+.em-chart-sunburst-chart {
+  position: relative;
+}
+.em-chart-sunburst-chart path {
+  stroke: #333333;
+}
+.em-chart-sunburst-explanation {
+  position: relative;
+  top: 230px;
+  left: 130px;
+  width: 140px;
+  text-align: center;
+  /*color: #666;*/
+  /*z-index: -1;*/
+}
+.em-chart-sunburst-percentage {
+  font-size: 2em;
 }
