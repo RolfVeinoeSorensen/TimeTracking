@@ -1,22 +1,21 @@
 {
-    "name": "TimeTracking",
+    "name": "EM.TimeTracking",
     "version": "1.0.0",
     "private": true,
     "dependencies": {
       "jquery": "^2.1.4",
       "jquery-ui": "^1.11.4",
       "fancytree": "^2.10.2",
-      "components-bootstrap": "^3.3.5",
-      "bootstrap-datepicker": "^1.4.0",
       "crossroads": "^0.12.0",
       "hasher": "^1.2.0",
       "requirejs": "^2.1.19",
       "requirejs-text": "^2.0.14",
       "knockout": "^3.3.0",
       "knockout-projections": "^1.1.0",
-      "toastr": "^2.1.1",
+      "knockout-mapping": "^2.4.1",
       "requirejs-base64": "^1.0.0",
-      "moment": "^2.10.3"
+      "moment": "^2.10.3",
+      "d3": "^3.5.6"
     },
   "resolutions": {
     "knockout": "^3.3.0"

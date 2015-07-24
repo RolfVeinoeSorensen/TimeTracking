@@ -21,6 +21,7 @@ module router {
 
     var allRoutes = [
         { url: '', params: { page: 'home-page' } },
+        { url: 'timetracking', params: { page: 'timetracking-page' } },
         { url: 'about', params: { page: 'about-page' } }
     ];
 

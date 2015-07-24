@@ -1,0 +1,60 @@
+﻿<div id="timetracking-container" class="ttClear">
+    <div class="ttFloatLeft ttMain">
+        <!-- Add a <table> element where the tree should appear: -->
+        <table id="treetable" class="ttTable">
+            <colgroup>
+                <col width="50">
+                <col>
+                <col width="50">
+                <col width="50">
+                <col width="50">
+                <col width="50">
+                <col width="50">
+                <col width="50">
+                <col width="50">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Sun</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="ttFloatLeft ttLeft">
+        <div class="timetracking-datepicker"></div>
+        <div>
+            <label for="personselector">Select person to register time on behalf of</label>
+            <select name="personselector" id="personselector">
+                <option selected="selected">Rolf Veinø Sørensen</option>
+                <option>Dorthe Veinø Sørensen</option>
+                <option>Helge Valentin Abels</option>
+                <option>Edvard Frederikke Rask</option>
+                <option>Svend Severin Dahl</option>
+            </select>
+        </div>
+        <div>
+            <p data-bind='text: selectedDate'></p>
+        </div>
+    </div>
+</div>

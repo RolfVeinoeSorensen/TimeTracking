@@ -6,27 +6,26 @@
 var require = {
     baseUrl: ".",
     paths: {
-        "bootstrap":            "Modules/TimeTracking/Scripts/libs/components-bootstrap/js/bootstrap.min",
-        "crossroads":           "Modules/TimeTracking/Scripts/libs/crossroads/dist/crossroads.min",
-        "hasher":               "Modules/TimeTracking/Scripts/libs/hasher/dist/js/hasher.min",
-        "jquery":               "Modules/TimeTracking/Scripts/libs/jquery/dist/jquery",
-        "jqueryui":             "Modules/TimeTracking/Scripts/libs/jquery-ui/jquery-ui.min",
-        "fancytree":            "Modules/TimeTracking/Scripts/libs/fancytree/dist/jquery.fancytree-all.min",
-        "knockout":             "Modules/TimeTracking/Scripts/libs/knockout/dist/knockout",
-        "knockout-projections": "Modules/TimeTracking/Scripts/libs/knockout-projections/dist/knockout-projections",
-        "signals":              "Modules/TimeTracking/Scripts/libs/js-signals/dist/signals.min",
-        "text":                 "Modules/TimeTracking/Scripts/libs/requirejs-text/text",
-        "toastr":               "Modules/TimeTracking/Scripts/libs/toastr/toastr",
-        "base64":               "Modules/TimeTracking/Scripts/libs/requirejs-base64/base64",
-        "moment":               "Modules/TimeTracking/Scripts/libs/moment/min/moment-with-locales.min",
-        "datepicker":           "Modules/TimeTracking/Scripts/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min"
+        "crossroads":           "Modules/EM.TimeTracking/Scripts/libs/crossroads/dist/crossroads.min",
+        "hasher":               "Modules/EM.TimeTracking/Scripts/libs/hasher/dist/js/hasher.min",
+        "jquery":               "Modules/EM.TimeTracking/Scripts/libs/jquery/dist/jquery",
+        "jqueryui":             "Modules/EM.TimeTracking/Scripts/libs/jquery-ui/jquery-ui.min",
+        "fancytree":            "Modules/EM.TimeTracking/Scripts/libs/fancytree/dist/jquery.fancytree-all.min",
+        "knockout":             "Modules/EM.TimeTracking/Scripts/libs/knockout/dist/knockout",
+        "knockout-projections": "Modules/EM.TimeTracking/Scripts/libs/knockout-projections/dist/knockout-projections",
+        "knockout.mapping": "Modules/EM.TimeTracking/Scripts/libs/knockout-mapping/build/output/knockout.mapping-latest",
+        "signals":              "Modules/EM.TimeTracking/Scripts/libs/js-signals/dist/signals.min",
+        "text":                 "Modules/EM.TimeTracking/Scripts/libs/requirejs-text/text",
+        "base64":               "Modules/EM.TimeTracking/Scripts/libs/requirejs-base64/base64",
+        "moment":               "Modules/EM.TimeTracking/Scripts/libs/moment/min/moment-with-locales.min",
+        "contextmenu":          "Modules/EM.TimeTracking/Scripts/libs/ui-contextmenu/jquery.ui-contextmenu.min",
+        "d3":                   "Modules/EM.TimeTracking/Scripts/libs/d3/d3.min"
     },
     shim: {
         jquery: { exports: '$' },
         "jqueryui": { deps: ["jquery"], exports: 'jqueryui' },
         "fancytree": { deps: ["jquery", "jqueryui"], exports: 'fancytree' },
-        "bootstrap": { deps: ["jquery"], exports: '$' },
-        "toastr": { deps: ["jquery"] },
-        "datepicker": { deps: ["jquery"], exports: 'datepicker' }
+        "contextmenu": { deps: ["jquery", "jqueryui"], exports: 'contextmenu' },
+        "knockout.mapping": { deps: ['knockout'], exports: 'knockout.mapping' }
     }
 };

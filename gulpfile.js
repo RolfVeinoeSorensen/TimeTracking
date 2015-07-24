@@ -5,6 +5,7 @@ var fs = require('fs'), vm = require('vm'), merge = require('deeply'), chalk = r
 // Gulp and plugins
 var gulp = require('gulp'), rjs = require('gulp-requirejs-bundler'), concat = require('gulp-concat'), clean = require('gulp-clean'), file = require('gulp-file'), minifyCSS = require('gulp-minify-css'),
     replace = require('gulp-replace'), uglify = require('gulp-uglify'), htmlreplace = require('gulp-html-replace'), typescript = require('gulp-tsc'), less = require('gulp-less'), git = require('gulp-git');
+var modulename = "EM.TimeTracking";
 
 gulp.task('default', ['tsApp', 'tsComponents', 'css']), function (callback) {
     callback();
@@ -44,20 +45,18 @@ gulp.task('tsComponents', function () {
 
 // Concatenates CSS files, rewrites relative paths to Bootstrap fonts, copies Bootstrap fonts
 gulp.task('css', ['less'], function () {
-    var bootstrapCss = gulp.src('./Styles/css/bootstrap.css'),
-        bootstrapDatepicker = gulp.src('./Styles/css/build3.css'),
-        toastCss = gulp.src('./Scripts/bower_modules/toastr/toastr.min.css'),
+    var fancytreeCss = gulp.src('./Styles/css/ui.fancytree.css'),
         appCss = gulp.src('./Styles/css/timetracking.css'),
-        combinedCss = ss(bootstrapCss, bootstrapDatepicker, toastCss, appCss).pipe(concat('timetracking.css')),
-        fontFiles = gulp.src('./Styles/less/bootstrap/fonts/*', { base: './Scripts/bower_modules/components-bootstrap/' });
-    return ss(combinedCss, fontFiles)
+        combinedCss = ss(fancytreeCss, appCss).pipe(concat('timetracking.css'));
+        //fontFiles = gulp.src('./Styles/less/bootstrap/fonts/*', { base: './Scripts/bower_modules/components-bootstrap/' });
+    return ss(combinedCss) //, fontFiles
         .pipe(minifyCSS())
         .pipe(gulp.dest('./Styles'));
 });
 
 // compile the less files for the theme including bootstrap
 gulp.task('less', function () {
-    return gulp.src(['./Styles/less/bootstrap/bootstrap.less', './Styles/less/bootstrap-datepicker/build/build3.less', './Styles/less/app/timetracking.less'])
+    return gulp.src(['./Styles/less/app/timetracking.less', './Styles/less/fancytree/ui.fancytree.less'])
         .pipe(less())
         .pipe(gulp.dest('./Styles/css'));
 });

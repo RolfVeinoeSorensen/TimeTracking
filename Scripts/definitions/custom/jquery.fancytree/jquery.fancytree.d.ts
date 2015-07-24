@@ -21,7 +21,7 @@ interface JQuery {
 declare module Fancytree {
     interface Fancytree {
         $div: JQuery;
-
+        on: any;
         rootNode: FancytreeNode;
         
         /** Activate node with a given key and fire focus and 
@@ -653,6 +653,7 @@ declare module Fancytree {
         targetType: string;
         /** (only for postProcess event) Original ajax response */
         response: any;
+        cmd: any;
     }
 
     /** The `this` context of any event function is set to tree's the HTMLDivElement  */
@@ -858,11 +859,13 @@ declare module Fancytree {
         unescapeHtml(s: string): string;
 
         warn(msg: string): void;
+
+        eventToString: any;
     }
 }
 
 declare var fancytree: JQuery;
 
 declare module "fancytree" {
-    export = datepicker;
+    export = fancytree;
 }

@@ -1,6 +1,6 @@
 ﻿using Orchard.UI.Resources;
 
-namespace TimeTracking
+namespace EM.TimeTracking
 {
     public class ResourceManifest : IResourceManifestProvider
     {

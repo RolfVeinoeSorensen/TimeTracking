@@ -1,4 +1,4 @@
-# TimeTracking
+# EasyModules.NET TimeTracking
 Timetracking module for Orchard
 
 Not ready for use yet!

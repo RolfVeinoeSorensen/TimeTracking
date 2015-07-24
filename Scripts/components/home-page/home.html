@@ -1,29 +1,15 @@
-<h2>TimeTracking</h2>
-<div id="timetracking-container" class="ttClear">
-    <div class="ttFloatLeft ttMain">
-        <p data-bind='text: message'></p>
-        <button data-bind='click: doSomething'>Click me</button>
-        <!-- Add a <table> element where the tree should appear: -->
-        <table id="treetable">
-            <colgroup>
-                <col width="30">
-                <col width="30">
-                <col>
-                <col width="50">
-                <col width="30">
-                <col width="50">
-                <col width="50">
-                <col width="50">
-            </colgroup>
-            <thead>
-                <tr> <th></th> <th>#</th> <th></th> <th>Key</th> <th>Like</th> <th>20</th> <th>21</th> <th>22</th></tr>
-            </thead>
-            <tbody>
-                <tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td></tr>
-            </tbody>
-        </table>
+﻿<section class="em-chart-sunburst-container">
+    <div id="main" class="em-chart-sunburst-main">        
+        <div id="chart" class="em-chart-sunburst-chart">
+            <div id="explanation" class="em-chart-sunburst-explanation" style="visibility: hidden;">
+                <span id="percentage" class="em-chart-sunburst-percentage"></span><br />
+                of visits begin with this sequence of pages
+            </div>
+        </div>
     </div>
-    <div class="ttFloatLeft ttLeft">
-        <div class="timetracking-datepicker"></div>
+    <div id="sidebar" class="em-chart-sunburst-sidebar">
+        <input type="checkbox" id="togglelegend"> Legend<br />
+        <div id="legend" class="em-chart-sunburst-legend" style="visibility: hidden;"></div>
     </div>
-</div>
+    <div id="sequence" class="em-chart-sunburst-sequence"></div>
+</section>

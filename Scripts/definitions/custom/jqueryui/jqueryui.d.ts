@@ -475,6 +475,20 @@ declare module JQueryUI {
     interface Droppable extends Widget, DroppableOptions, DroppableEvents {
     }
 
+    // SelectMenu //////////////////////////////////////////////////
+    interface SelectMenuOptions {
+        width: any;
+    }
+    interface SelectMenuUIParams {
+    }
+    interface SelectMenuEvent {
+        (event: Event, ui: SelectMenuUIParams): void;
+    }
+    interface SelectMenuEvents {
+    }
+    interface SelectMenu extends Widget, SelectMenuOptions, SelectMenuEvents {
+    }
+
     // Menu //////////////////////////////////////////////////
 
     interface MenuOptions {
@@ -1629,6 +1643,30 @@ interface JQuery {
     selectable(optionLiteral: string, optionName: string): any;
     selectable(optionLiteral: string, options: JQueryUI.SelectableOptions): any;
     selectable(optionLiteral: string, optionName: string, optionValue: any): JQuery;
+
+    selectmenu(): JQuery;
+    //menu(methodName: 'blur'): void;
+    //menu(methodName: 'collapse', event?: JQueryEventObject): void;
+    //menu(methodName: 'collapseAll', event?: JQueryEventObject, all?: boolean): void;
+    //menu(methodName: 'destroy'): void;
+    //menu(methodName: 'disable'): void;
+    //menu(methodName: 'enable'): void;
+    //menu(methodName: string, event: JQueryEventObject, item: JQuery): void;
+    //menu(methodName: 'focus', event: JQueryEventObject, item: JQuery): void;
+    //menu(methodName: 'isFirstItem'): boolean;
+    //menu(methodName: 'isLastItem'): boolean;
+    //menu(methodName: 'next', event?: JQueryEventObject): void;
+    //menu(methodName: 'nextPage', event?: JQueryEventObject): void;
+    //menu(methodName: 'previous', event?: JQueryEventObject): void;
+    //menu(methodName: 'previousPage', event?: JQueryEventObject): void;
+    //menu(methodName: 'refresh'): void;
+    //menu(methodName: 'select', event?: JQueryEventObject): void;
+    //menu(methodName: 'widget'): JQuery;
+    //menu(methodName: string): JQuery;
+    selectmenu(options: JQueryUI.SelectMenuOptions): JQuery;
+    //menu(optionLiteral: string, optionName: string): any;
+    //menu(optionLiteral: string, options: JQueryUI.MenuOptions): any;
+    //menu(optionLiteral: string, optionName: string, optionValue: any): JQuery;
 
     slider(): JQuery;
     slider(methodName: 'destroy'): void;

@@ -1,0 +1,59 @@
+﻿<#@ template debug="false" hostspecific="True" language="C#" #>
+<#@ assembly name="$(TargetDir)TypeLite.dll" #>
+<#@ assembly name="$(TargetDir)TypeLite.Net4.dll" #>
+<#@ assembly name="$(TargetDir)$(TargetFileName)" #>
+
+<#@ import namespace="TypeLite" #> 
+<#@ import namespace="TypeLite.Net4" #> 
+<#@ import namespace="TypeLite.TsModels" #> 
+<#@output extension=".d.ts"#>
+
+
+<# var manager = Manager.Create(Host, GenerationEnvironment); #>
+ <#@include file="Manager.ttinclude"#>
+<# 
+	bool generateKnockoutFiles = true;
+	var definitions = TypeScript.Definitions()
+		.For<EM.TimeTracking.Dtos.MainTypeDto>()
+		.For<EM.TimeTracking.Dtos.MainDto>()
+		.For<EM.TimeTracking.Dtos.TimeRegistrationDto>()
+		;
+#>
+<# var ts = definitions; #>
+<#= ts.Generate(TsGeneratorOutput.Properties) #>
+
+///<reference path='definitions/definitelyTyped/knockout/knockout.d.ts' />
+///<reference path='definitions/definitelyTyped/knockout.mapping/knockout.mapping.d.ts' />
+<# if (generateKnockoutFiles) { #>
+<#= definitions
+	.WithTypeFormatter((type, f) => "I" + ((TypeLite.TsModels.TsClass)type).Name + "Vm")
+	.WithFormatter(KnockoutMemberTypeConverter)
+	.WithFormatter(KnockoutMemberIdentifierConverter) #>
+<# } #>
+
+
+
+
+<# manager.EndBlock(); #>
+<# manager.Process(true); #>
+
+<#+
+
+
+public string KnockoutMemberTypeConverter(string memberTypeName, bool isMemberCollection, int dimension = 1)
+{ 
+  if (isMemberCollection)
+  {
+    return string.Format("KnockoutObservableArray<{0}>", memberTypeName);
+  }
+  else
+  {
+    return string.Format("KnockoutObservable<{0}>", memberTypeName);
+  }
+}
+
+public string KnockoutMemberIdentifierConverter(TypeLite.TsModels.TsProperty identifier)
+{
+  return identifier.Name;
+}
+#>

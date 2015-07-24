@@ -1,0 +1,84 @@
+﻿{
+  "name": "root",
+  "children": [
+    {
+      "name": "Customer 1",
+      "children": [
+        {
+          "name": "Main Task 1",
+          "children": [
+            {
+              "name": "Sub Task 1",
+              "size": 22781
+            },
+            {
+              "name": "Sub Task 2",
+              "size": 49154
+            }
+          ]
+        },
+        {
+          "name": "Main Task 2",
+          "children": [
+            {
+              "name": "Sub Task 1",
+              "size": 12781
+            },
+            {
+              "name": "Sub Task 2",
+              "size": 29154
+            },
+            {
+              "name": "Sub Task 3",
+              "size": 29154
+            }
+          ]
+        }
+      ]
+    },
+        {
+      "name": "Customer 2",
+      "children": [
+        {
+          "name": "Main Task 1",
+          "children": [
+            {
+              "name": "Sub Task 1",
+              "size": 22781
+            },
+            {
+              "name": "Sub Task 2",
+              "size": 49154
+            }
+          ]
+        },
+        {
+          "name": "Main Task 2",
+          "children": [
+            {
+              "name": "Sub Task 1",
+              "size": 12781
+            },
+            {
+              "name": "Sub Task 2",
+              "size": 29154
+            }
+          ]
+        },
+        {
+          "name": "Main Task 3",
+          "children": [
+            {
+              "name": "Sub Task 1",
+              "size": 12781
+            },
+            {
+              "name": "Sub Task 2",
+              "size": 29154
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

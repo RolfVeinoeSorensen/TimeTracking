@@ -1,28 +1,31 @@
 <!--
   The navigation UI that is docked to the top of the window. Most of this markup simply
-  follows Bootstrap conventions. The only Knockout-specific parts are the data-bind
+  follows HTML 5 conventions. The only Knockout-specific parts are the data-bind
   attributes on the <li> elements.
 -->
-<div class="navbar navbar-inverse navbar-right" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">TimeTracking</a>
-    </div>
-    <div class="collapse navbar-collapse">
-
-      <ul class="nav navbar-nav">
-
-        <li data-bind="css: { active: route().page === 'about-page' }">
-          <a href="#about">About</a>
+<nav>
+    <ul>
+        <li class="first" data-bind="css: { 'current': route().page === 'home-page' }">
+            <a href="#">Overview</a>
         </li>
-      </ul>
-
-    </div>
-  </div>
-</div>
+        <li data-bind="css: { 'current': route().page === 'timetracking-page' }">
+            <a href="#timetracking">Timetracking</a>
+        </li>
+        <li data-bind="css: { 'current': route().page === 'customers-page' }">
+            <a href="#customers">Customers</a>
+        </li>
+        <li data-bind="css: { 'current': route().page === 'billing-page' }">
+            <a href="#billing">Billing</a>
+        </li>
+        <li data-bind="css: { 'current': route().page === 'expenses-page' }">
+            <a href="#expenses">Expenses</a>
+        </li>
+        <li data-bind="css: { 'current': route().page === 'reports-page' }">
+            <a href="#reports">Reports</a>
+        </li>
+        <li class="last" data-bind="css: { 'current': route().page === 'about-page' }">
+            <a href="#about">About</a>
+        </li>
+    </ul>
+</nav>
+<div style="clear:both; padding-bottom:1em;"></div>
