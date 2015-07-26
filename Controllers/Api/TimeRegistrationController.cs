@@ -46,6 +46,12 @@ namespace EM.TimeTracking.Controllers.Api
         [ActionName("getrootmemberswithtimeregistrations")]
         public List<MainDto> GetRootMembersWithTimeTrackings([FromUri]string selectedDate)
         {
+            //http://docs.orchardproject.net/Documentation/custom-permissions
+            //var user = _authenticationService.GetAuthenticatedUser();
+            if (!_orchardServices.Authorizer.Authorize(Permissions.EditOwnTimeRegistrations, T("Couldn't add comment")))
+            {
+                //todo block this method
+            }
             var selectedDateTime = DateTime.Parse(selectedDate);
             var startDate = selectedDateTime.DateFromDateAndWeekday(DayOfWeek.Monday);
             var endDate = startDate.AddDays(6);

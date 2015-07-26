@@ -41,8 +41,11 @@ namespace EM.TimeTracking.Services
                     timeTrackingsAllDaysInWeek.Add(timeTrackingWithDate);
                 }
                 member.timeRegistrations = timeTrackingsAllDaysInWeek;
+                member.cache = false;
+                member.lazy = true;
             }
             return members;
         }
+
     }
 }

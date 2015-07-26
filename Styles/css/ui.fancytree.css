@@ -382,3 +382,30 @@ table.fancytree-ext-columnview span.fancytree-node.fancytree-expanded {
 table.fancytree-ext-columnview span.fancytree-node.fancytree-active {
   background-color: royalblue;
 }
+/*------------------------------------------------------------------------------
+ * Node type icon
+ * Note: IE6 doesn't correctly evaluate multiples class names,
+ *		 so we create combined class names that can be used in the CSS.
+ *
+ * Prefix: fancytree-ico-
+ * 1st character: 'e': expanded, 'c': collapsed
+ * 2nd character (optional): 'f': folder
+ *----------------------------------------------------------------------------*/
+.fancytree-loading.fancytree-active span.fancytree-expander,
+.fancytree-loading.fancytree-active span.fancytree-expander:hover,
+.fancytree-statusnode-wait.fancytree-active span.fancytree-icon,
+.fancytree-statusnode-wait.fancytree-active span.fancytree-icon:hover {
+  background-image: url("loading_16_active.gif");
+}
+tr:nth-child(odd) .fancytree-loading span.fancytree-expander,
+tr:nth-child(odd) .fancytree-loading span.fancytree-expander:hover,
+tr:nth-child(odd) .fancytree-statusnode-wait span.fancytree-icon,
+tr:nth-child(odd) .fancytree-statusnode-wait span.fancytree-icon:hover {
+  background-image: url("loading_16_odd.gif");
+}
+tr:nth-child(even) .fancytree-loading span.fancytree-expander,
+tr:nth-child(even) .fancytree-loading span.fancytree-expander:hover,
+tr:nth-child(even) .fancytree-statusnode-wait span.fancytree-icon,
+tr:nth-child(even) .fancytree-statusnode-wait span.fancytree-icon:hover {
+  background-image: url("loading_16_even.gif");
+}

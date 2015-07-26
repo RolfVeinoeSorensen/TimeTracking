@@ -37,6 +37,9 @@
 @fancy-node-border-width: 1px;
 @fancy-node-border-radius: 0px;
 @fancy-node-outline-width: 1px;
+@fancy-loading-url-active: url("@{fancy-image-dir}/loading_16_active.gif");
+@fancy-loading-url-odd: url("@{fancy-image-dir}/loading_16_odd.gif");
+@fancy-loading-url-even: url("@{fancy-image-dir}/loading_16_even.gif");
 
 /*******************************************************************************
  * Node titles
@@ -91,4 +94,40 @@ table.fancytree-ext-columnview span.fancytree-node.fancytree-expanded {
 }
 table.fancytree-ext-columnview span.fancytree-node.fancytree-active {
 	background-color: royalblue;
+}
+
+/*------------------------------------------------------------------------------
+ * Node type icon
+ * Note: IE6 doesn't correctly evaluate multiples class names,
+ *		 so we create combined class names that can be used in the CSS.
+ *
+ * Prefix: fancytree-ico-
+ * 1st character: 'e': expanded, 'c': collapsed
+ * 2nd character (optional): 'f': folder
+ *----------------------------------------------------------------------------*/
+.fancytree-loading.fancytree-active span.fancytree-expander,
+.fancytree-loading.fancytree-active span.fancytree-expander:hover,
+.fancytree-statusnode-wait.fancytree-active span.fancytree-icon,
+.fancytree-statusnode-wait.fancytree-active span.fancytree-icon:hover {
+	background-image: @fancy-loading-url-active;
+//  .setBgImageUrl(@fancy-loading-url);
+	.useSprite(0, 0);
+}
+// odd table rows bg #2d2d2d fg #ECECEC
+tr:nth-child(odd) .fancytree-loading span.fancytree-expander,
+tr:nth-child(odd) .fancytree-loading span.fancytree-expander:hover,
+tr:nth-child(odd) .fancytree-statusnode-wait span.fancytree-icon,
+tr:nth-child(odd) .fancytree-statusnode-wait span.fancytree-icon:hover {
+	background-image: @fancy-loading-url-odd;
+//  .setBgImageUrl(@fancy-loading-url);
+	.useSprite(0, 0);
+}
+// even table rows bg #000000 fg #ECECEC
+tr:nth-child(even) .fancytree-loading span.fancytree-expander,
+tr:nth-child(even) .fancytree-loading span.fancytree-expander:hover,
+tr:nth-child(even) .fancytree-statusnode-wait span.fancytree-icon,
+tr:nth-child(even) .fancytree-statusnode-wait span.fancytree-icon:hover {
+	background-image: @fancy-loading-url-even;
+//  .setBgImageUrl(@fancy-loading-url);
+	.useSprite(0, 0);
 }

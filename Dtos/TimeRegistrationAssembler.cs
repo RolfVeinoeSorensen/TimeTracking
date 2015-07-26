@@ -17,7 +17,7 @@ namespace EM.TimeTracking.Dtos
             entity.Id = dto.key;
             entity.MainId = dto.mainId;
             entity.Date = dto.date;
-            entity.Value = dto.value;
+            entity.Value =  dto.value;
 
             dto.OnEntity(entity);
 

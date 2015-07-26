@@ -110,6 +110,30 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TypeLite.Net4.d.ts</LastGenOutput>
     </Content>
+    <Content Include="Styles\fancytree-icons-16.png" />
+    <Content Include="Styles\fancytree-icons-32.png" />
+    <Content Include="Styles\icons.gif" />
+    <Content Include="Styles\less\fancytree\fancytree-icons-16.png" />
+    <Content Include="Styles\less\fancytree\fancytree-icons-32.png" />
+    <Content Include="Styles\less\fancytree\icons.gif" />
+    <Content Include="Styles\less\fancytree\loading.gif" />
+    <Content Include="Styles\less\fancytree\loading_128.gif" />
+    <Content Include="Styles\less\fancytree\loading_16.gif" />
+    <Content Include="Styles\less\fancytree\loading_16_active.gif" />
+    <Content Include="Styles\less\fancytree\loading_16_even.gif" />
+    <Content Include="Styles\less\fancytree\loading_16_odd.gif" />
+    <Content Include="Styles\less\fancytree\loading_32.gif" />
+    <Content Include="Styles\less\fancytree\loading_64.gif" />
+    <Content Include="Styles\less\fancytree\ui.fancytree.css" />
+    <Content Include="Styles\less\fancytree\ui.fancytree.min.css" />
+    <Content Include="Styles\loading.gif" />
+    <Content Include="Styles\loading_128.gif" />
+    <Content Include="Styles\loading_16.gif" />
+    <Content Include="Styles\loading_16_active.gif" />
+    <Content Include="Styles\loading_16_even.gif" />
+    <Content Include="Styles\loading_16_odd.gif" />
+    <Content Include="Styles\loading_32.gif" />
+    <Content Include="Styles\loading_64.gif" />
     <Content Include="Web.config" />
     <Content Include="Scripts\Web.config" />
     <Content Include="Styles\Web.config" />
@@ -142,6 +166,7 @@
     <Compile Include="Models\MainRecord.cs" />
     <Compile Include="Models\MainTypeRecord.cs" />
     <Compile Include="Models\TimeRegistrationRecord.cs" />
+    <Compile Include="Permissions.cs" />
     <Compile Include="ResourceManifest.cs" />
     <Compile Include="Routes.cs" />
     <Compile Include="Services\IMainService.cs" />
@@ -151,7 +176,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Styles\css\" />
-    <Folder Include="Styles\less\fancytree\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\TimeTracking.cshtml" />
@@ -177,6 +201,8 @@
     <TypeScriptCompile Include="Scripts\definitions\custom\d3\d3.d.ts" />
     <TypeScriptCompile Include="Scripts\definitions\custom\d3\plugins\d3.superformula-tests.ts" />
     <TypeScriptCompile Include="Scripts\definitions\custom\d3\plugins\d3.superformula.d.ts" />
+    <TypeScriptCompile Include="Scripts\definitions\custom\jquery.cookie\jquery.cookie-tests.ts" />
+    <TypeScriptCompile Include="Scripts\definitions\custom\jquery.cookie\jquery.cookie.d.ts" />
     <TypeScriptCompile Include="Scripts\definitions\custom\jquery.fancytree\jquery.fancytree-tests.ts" />
     <TypeScriptCompile Include="Scripts\definitions\custom\jquery.fancytree\jquery.fancytree.d.ts" />
     <TypeScriptCompile Include="Scripts\definitions\custom\jqueryui\jqueryui.d.ts" />
@@ -225,6 +251,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\Manager.ttinclude" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\less\fancytree\fancytree-icons-16.psd" />
+    <Content Include="Styles\less\fancytree\fancytree-icons-32.psd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\less\fancytree\skin-common.less" />
+    <Content Include="Styles\less\fancytree\ui.fancytree.less" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

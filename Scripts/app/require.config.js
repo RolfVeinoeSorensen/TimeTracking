@@ -10,10 +10,11 @@ var require = {
         "hasher":               "Modules/EM.TimeTracking/Scripts/libs/hasher/dist/js/hasher.min",
         "jquery":               "Modules/EM.TimeTracking/Scripts/libs/jquery/dist/jquery",
         "jqueryui":             "Modules/EM.TimeTracking/Scripts/libs/jquery-ui/jquery-ui.min",
-        "fancytree":            "Modules/EM.TimeTracking/Scripts/libs/fancytree/dist/jquery.fancytree-all.min",
+        "jquerycookie":         "Modules/EM.TimeTracking/Scripts/libs/jquery-cookie/jquery.cookie",
+        "fancytree":            "Modules/EM.TimeTracking/Scripts/libs/fancytree/dist/jquery.fancytree-all",
         "knockout":             "Modules/EM.TimeTracking/Scripts/libs/knockout/dist/knockout",
         "knockout-projections": "Modules/EM.TimeTracking/Scripts/libs/knockout-projections/dist/knockout-projections",
-        "knockout.mapping": "Modules/EM.TimeTracking/Scripts/libs/knockout-mapping/build/output/knockout.mapping-latest",
+        "knockout.mapping":     "Modules/EM.TimeTracking/Scripts/libs/knockout-mapping/build/output/knockout.mapping-latest",
         "signals":              "Modules/EM.TimeTracking/Scripts/libs/js-signals/dist/signals.min",
         "text":                 "Modules/EM.TimeTracking/Scripts/libs/requirejs-text/text",
         "base64":               "Modules/EM.TimeTracking/Scripts/libs/requirejs-base64/base64",
@@ -24,6 +25,7 @@ var require = {
     shim: {
         jquery: { exports: '$' },
         "jqueryui": { deps: ["jquery"], exports: 'jqueryui' },
+        "jquerycookie": { deps: ["jquery"], exports: 'jquerycookie' },
         "fancytree": { deps: ["jquery", "jqueryui"], exports: 'fancytree' },
         "contextmenu": { deps: ["jquery", "jqueryui"], exports: 'contextmenu' },
         "knockout.mapping": { deps: ['knockout'], exports: 'knockout.mapping' }
